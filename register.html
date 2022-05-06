@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+<style>
+    div{
+
+        
+        margin: auto;
+        margin-left: 100px;
+        display: flex;
+        justify-content: space-between;
+        background-color: lightgray;
+    }
+    
+        
+    
+    input{
+        box-shadow: 0 3px 3px #bdbdbd;
+    float: left;
+    font-size: 15px;
+    height: 36px;
+
+
+    font-weight: normal;
+    font-family: CeraPRO-Regular;
+    }
+    *{
+        margin: 25px;
+        margin-top: 10px;
+    }
+</style>
+
+
+</head>
+<body>
+    <div>
+        <form action="">
+            <input type="text" placeholder="Email Address" id="email" >
+            <input type="text" placeholder="Password" id="password">
+            <input type="submit" value="Register" style="background-color: gray;">
+            
+        </form>
+
+    </div>
+    
+</body>
+<script>
+    var form=document.querySelector("form");
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        
+     var data={
+      email:form.email.value,
+      password:form.password.value
+
+     };
+       localStorage.setItem("userdata",JSON.stringify(data));
+    })
+</script>
+
+</html>
